@@ -5,7 +5,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "chalk": "latest",
+    "compression": "latest",
+    "express": "latest",
     "history": "^4.7.2",
+    "ip": "latest",
+    "minimist": "latest",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.0",
@@ -34,7 +39,11 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "ngrok": "^3.1.1",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-middleware": "^3.5.2",
+    "webpack-hot-middleware": "^2.24.3"
   },
   "proxy": "http://trivago-magazine-work-sample-server.s3-website.eu-central-1.amazonaws.com"
 }
