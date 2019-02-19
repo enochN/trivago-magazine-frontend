@@ -6,7 +6,7 @@ class Post extends Component {
         return (
             <a className="trivago-post-wrapper" href={this.props.data.uri} target="_self">
             <div className="trivago-post">
-                <img className="img img-fluid" src={this.props.data.thumbnail_url} />
+                <img className="img img-fluid" src={this.props.data.thumbnail_url} alt={this.props.data.thumbnail.alt} />
                 <h2>
                     <span>
                         {this.props.data.card_title}

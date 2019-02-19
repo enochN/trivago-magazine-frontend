@@ -14,7 +14,7 @@ export default class App extends Component {
           <Router history={history}>
             <Switch>
               <Route exact path="/" component={HomePage} />
-              <Route exact path="/details" component={PostDetailsPage} />
+              <Route exact path="/p/:slug" component={PostDetailsPage} />
             </Switch>
           </Router>
         </Provider>
