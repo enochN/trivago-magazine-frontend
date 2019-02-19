@@ -6,7 +6,7 @@ services:
     build: .
     command: node server
     volumes:
-      - .:/usr/src/app/
-      - /usr/src/app/node_modules
+      - .:/home/node/app
+      - /home/node/app/node_modules
     ports:
       - "5005:5005"
