@@ -1,13 +1,17 @@
 FROM node:8.15.0-alpine
 
-WORKDIR /usr/src/app
+USER node
+
+RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app/
+
+WORKDIR /home/node/app/
 
 COPY package*.json ./
 
-RUN npm install
+COPY --chown=node:node . .
 
-COPY . .
+RUN npm install && npm run build
 
 EXPOSE 5005
 
-CMD ["./scripts/start.sh"]
+CMD ["node", "server"]
