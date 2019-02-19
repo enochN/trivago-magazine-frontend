@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    environment:
+      - NODE_ENV=production
+    build: .
+    command: node server
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    ports:
+      - "5005:5005"
