@@ -5,6 +5,7 @@ import {loadLatestPosts} from "../actions";
 import {connect} from "react-redux";
 import Post from "../components/Post";
 import MagazineHeader from "../components/MagazineHeader";
+import MagazineFooter from "../components/MagazineFooter";
 
 class HomePage extends Component {
 
@@ -16,19 +17,22 @@ class HomePage extends Component {
         return (
             <div className="App">
                 <MagazineHeader />
-                <div className="banner-image">
-                    <img src={banner} alt="banner"/>
-                    <p>Latest Posts</p>
-                </div>
-                <div className="container" style={{paddingBottom: "16px"}}>
-                    <div className="row" style={{marginTop: "4px"}}>
-                    {
-                        this.props.latestPosts.map((post) => {
-                            return <div key={post.id}  className="col col-sm-12 col-md-6 col-lg-4"><Post data={post} /></div>
-                        })
-                    }
+                <div className="main-content">
+                    <div className="banner-image">
+                        <img src={banner} alt="banner"/>
+                        <p>Latest Posts</p>
+                    </div>
+                    <div className="container" style={{paddingBottom: "16px"}}>
+                        <div className="row" style={{marginTop: "4px"}}>
+                            {
+                                this.props.latestPosts.map((post) => {
+                                    return <div key={post.id}  className="col col-sm-12 col-md-6 col-lg-4"><Post data={post} /></div>
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
+                <MagazineFooter />
             </div>
         );
     }
