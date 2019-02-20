@@ -1,3 +1,9 @@
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+import 'core-js/es6/array';
+import 'raf/polyfill';
+// import '@babel/polyfill';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';

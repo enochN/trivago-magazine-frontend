@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../styles/App.css';
+import banner from '../../assets/landscape_one_unsplash.jpg';
 import {loadLatestPosts} from "../actions";
 import {connect} from "react-redux";
 import Post from "../components/Post";
@@ -15,6 +16,10 @@ class HomePage extends Component {
         return (
             <div className="App">
                 <MagazineHeader />
+                <div className="banner-image">
+                    <img src={banner} alt="banner"/>
+                    <p>Latest Posts</p>
+                </div>
                 <div className="container" style={{paddingBottom: "16px"}}>
                     <div className="row" style={{marginTop: "4px"}}>
                     {
