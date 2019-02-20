@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "chalk": "latest",
     "compression": "latest",
+    "cors": "^2.8.5",
     "express": "latest",
     "history": "^4.7.2",
     "ip": "latest",
