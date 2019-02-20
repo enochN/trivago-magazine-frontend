@@ -1,9 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const logger = require('./logger');
 const argv = require('./argv');
 const port = require('./port');
 const setup = require('./middlewares/frontendMiddleware');
-const axios = require("axios");
 
 const isDev = process.env.NODE_ENV !== 'production';
 const ngrok =
@@ -15,11 +16,11 @@ const ngrok =
 const { resolve } = require('path');
 const app = express();
 
-app.get("*.json", async (req, res, next) => {
-    let response = await axios.get(`http://trivago-magazine-work-sample-server.s3-website.eu-central-1.amazonaws.com${req.url}`);
-    res.set('Content-Type', 'application/json');
-    res.send(response.data);
-});
+app.use(cors());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use(require('./api'));
 
 // In production we need to pass these values in instead of relying on webpack
 setup(app, {
