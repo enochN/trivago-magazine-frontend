@@ -17,22 +17,21 @@ class PostDetailsPage extends Component {
                 <MagazineHeader />
                 <div className="main-content">
                     {!this.props.postDetails ? null :
-                        <img className="img img-fluid" style={{width: "100%", height: "550px"}}
-                             src={this.props.postDetails.thumbnail_url} alt={this.props.postDetails.thumbnail.alt}/>
+                        <div className="banner-image">
+                            <img className="img img-fluid" src={this.props.postDetails.thumbnail_url} alt={this.props.postDetails.thumbnail.alt}/>
+                        </div>
                     }
 
                     {!this.props.postDetails ? null :
                         <div className="container">
-                            <div className="row" style={{paddingTop: "24px"}}>
-                                <div className="col col-lg-8 col-sm-12" style={{minHeight: "600px", padding: "8px"}}>
-                                    <h1 style={{fontSize: "44px", lineHeight: "1.25", fontWeight: "700", color: "#303030"}}>
+                            <div className="row" style={{padding: "8px"}}>
+                                <div className="col-lg-8 col-sm-12 col-md-12" style={{minHeight: "600px", padding: "8px"}}>
+                                    <h1 className="post-title">
                                         {this.props.postDetails.title}
                                     </h1>
-                                    <div style={{fontSize:"20px", lineHeight:"30px", color:"#303030", fontWeight: "400", textAlign:"justify"}}
-                                         dangerouslySetInnerHTML={{__html: this.props.postDetails.content[0].text}} />
+                                    <div className="post-content" dangerouslySetInnerHTML={{__html: this.props.postDetails.content[0].text}} />
                                 </div>
-                                <div className="col col-lg-4"
-                                     style={{minHeight: "600px"}}/>
+
                             </div>
                         </div>
                     }

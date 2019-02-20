@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   line-height: 1.5;
+  text-align: justify;
 }
 
 code {
@@ -20,28 +21,6 @@ code {
   min-height: 100vh;
   text-align: center;
   position: relative;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40px;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 64px;
-  height: 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .main-content {
@@ -84,6 +63,18 @@ code {
   left: 40%;
 }
 
+@media screen and (max-width: 767px) {
+  .magazine-header {
+    height: 54px;
+  }
+
+  .magazine-header .logo {
+    height: 24px;
+    left: 26%;
+  }
+}
+
+
 .banner-image {
   position: relative;
 }
@@ -102,6 +93,18 @@ code {
   text-transform: uppercase;
   font-weight: 500;
 
+}
+
+@media screen and (max-width: 767px) {
+  .banner-image img {
+    height: 200px;
+  }
+
+  .banner-image p {
+    font-size: 24px;
+    left: 32px;
+    bottom: 12px;
+  }
 }
 
 .trivago-post-wrapper {
@@ -129,10 +132,6 @@ code {
   height: 270px;
 }
 
-@media all {
-
-}
-
 .trivago-post h2 {
   font-size: 20px;
   line-height: 25px;
@@ -146,6 +145,49 @@ code {
 .trivago-post .excerpt {
   font-size: 16px;
   color: #697379;
+  text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+  .trivago-post img {
+    height: 204px;
+  }
+
+  .trivago-post {
+    height: 440px;
+  }
+
+  .trivago-post h2 {
+    font-size: 16px;
+    color: #303030;
+  }
+}
+
+.post-title {
+  font-size: 44px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #303030;
+}
+
+.post-content {
+  font-size: 20px;
+  line-height: 30px;
+  color: #303030;
+  font-weight: 400;
+  text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+  .post-title {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: justify;
+  }
+
+  .post-content {
+    font-size: 16px;
+  }
 }
 
 footer.footer {
@@ -161,4 +203,15 @@ footer .footer-logo {
   position: absolute;
   bottom: 36px;
   left: 43%;
+}
+
+@media screen and (max-width: 767px) {
+  footer.footer {
+    height: 100px;
+  }
+
+  footer .footer-logo {
+    bottom: 24px;
+    left: 27%;
+  }
 }
