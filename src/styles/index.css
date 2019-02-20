@@ -15,6 +15,42 @@ code {
     monospace;
 }
 
+.magazine-header {
+  height: 60px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 4px 0 rgba(55,69,77,.5);
+  z-index: 10;
+  transition: top .4s ease;
+  position: relative;
+}
+
+.container-wide {
+  height: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 0 20px;
+  margin-bottom: 0;
+}
+
+.fixed-header {
+  height: 100%;
+  max-width: 962px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 4px 20px 5px;
+}
+
+.magazine-header .logo {
+  height: 28px;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
 .trivago-post-wrapper {
 
 }

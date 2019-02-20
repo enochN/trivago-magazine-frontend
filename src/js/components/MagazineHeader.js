@@ -1,8 +1,15 @@
 import React from 'react';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/trivago_logo.svg';
+import {Link} from "react-router-dom";
 
 export default (props) => (
-    <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <header className="magazine-header">
+        <div className="container-wide">
+            <div className="fixed-header">
+                <Link to="/">
+                    <img src={logo} className="logo" alt="logo" style={{display:"inline-block"}} />
+                </Link>
+            </div>
+        </div>
     </header>
 )

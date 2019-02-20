@@ -15,7 +15,7 @@ class HomePage extends Component {
         return (
             <div className="App">
                 <MagazineHeader />
-                <div className="container">
+                <div className="container" style={{paddingBottom: "16px"}}>
                     <div className="row" style={{marginTop: "4px"}}>
                     {
                         this.props.latestPosts.map((post) => {
