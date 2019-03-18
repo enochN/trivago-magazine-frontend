@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import '../../styles/App.css';
 import {connect} from "react-redux";
 import {loadPostDetails} from "../actions";
@@ -15,6 +16,26 @@ class PostDetailsPage extends Component {
         return (
             <div className="App">
                 <MagazineHeader />
+              { !this.props.postDetails ? null : 
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>{this.props.postDetails.seo_meta.title}</title>
+                        <meta name="description" content={this.props.postDetails.seo_meta.metadesc} />
+                        <link rel="canonical" href={this.props.postDetails.seo_meta.canonical} />
+                        <meta name="keywords" content={`${this.props.postDetails.seo_meta.focuskw}, ${this.props.postDetails.seo_meta.metakeywords}`} />
+                        <meta name="og:site_name" property="og:site_name" content={this.props.postDetails.seo_meta.opengraph_site_name} />
+                        <meta name="og:locale" property="og:locale" content={this.props.postDetails.seo_meta.opengraph_locale} />
+                        <meta name="og:type" property="og:type" content={this.props.postDetails.seo_meta.opengraph_type} />
+                        <meta name="og:title" property="og:title" content={this.props.postDetails.seo_meta.opengraph_title} />
+                        <meta name="og:description" property="og:description" content={this.props.postDetails.seo_meta.opengraph_description} />
+                        <meta name="og:url" property="og:url" content={this.props.postDetails.seo_meta.opengraph_url} />
+                        <meta name="og:image" property="og:image" content={this.props.postDetails.seo_meta.opengraph_image} />
+                        <meta name="twitter:title" content={this.props.postDetails.seo_meta.twitter_title} />
+                        <meta name="twitter:description" content={this.props.postDetails.seo_meta.twitter_description} />
+                        <meta name="twitter:image" content={this.props.postDetails.seo_meta.twitter_image} />
+
+                    </Helmet>
+             }
                 <div className="main-content">
                     {!this.props.postDetails ? null :
                         <div className="banner-image">
