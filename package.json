@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.1",
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "bootstrap": "^4.3.1",
     "chalk": "latest",
     "compression": "latest",
